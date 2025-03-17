@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5726D3D-4B07-4950-BF0E-D8B8C684D706}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Eventify</RootNamespace>
+    <AssemblyName>Eventify</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\maruf\OneDrive\Desktop\Eventify\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Eventify</ProductName>
+    <PublisherName>Eventify</PublisherName>
+    <SuiteName>Eventify</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo-color.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Eventify.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>364C06610589FD18C2E0C1B9570D0B8A272BCC68</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Eventify_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CardDataList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CardDataList.Designer.cs">
+      <DependentUpon>CardDataList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\EventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\EventForm.Designer.cs">
+      <DependentUpon>EventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\EventListA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminForms\EventListA.Designer.cs">
+      <DependentUpon>EventListA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\GenerateCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\GenerateCards.Designer.cs">
+      <DependentUpon>GenerateCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\MainAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\MainAdminForm.Designer.cs">
+      <DependentUpon>MainAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\RegisteredEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\RegisteredEvents.Designer.cs">
+      <DependentUpon>RegisteredEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\RegisteredList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminForms\RegisteredList.Designer.cs">
+      <DependentUpon>RegisteredList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\SearchEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\SearchEvents.Designer.cs">
+      <DependentUpon>SearchEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\SearchUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\SearchUsers.Designer.cs">
+      <DependentUpon>SearchUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\UserList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminForms\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingScreen.Designer.cs">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\AccountPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\AccountPay.Designer.cs">
+      <DependentUpon>AccountPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\AddBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\AddBalance.Designer.cs">
+      <DependentUpon>AddBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\AllEventList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\AllEventList.Designer.cs">
+      <DependentUpon>AllEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\BkashPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\BkashPay.Designer.cs">
+      <DependentUpon>BkashPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\BrowseEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\BrowseEvents.Designer.cs">
+      <DependentUpon>BrowseEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\CreateEvent1_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\CreateEvent1_0.Designer.cs">
+      <DependentUpon>CreateEvent1_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\CreateEvent2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\CreateEvent2.Designer.cs">
+      <DependentUpon>CreateEvent2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\CreateEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\CreateEvents.Designer.cs">
+      <DependentUpon>CreateEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\Credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\Credits.Designer.cs">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\EventList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\EventList.Designer.cs">
+      <DependentUpon>EventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\HistoryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\HistoryList.Designer.cs">
+      <DependentUpon>HistoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\HomeEventList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\HomeEventList.Designer.cs">
+      <DependentUpon>HomeEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\MyEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\MyEvents.Designer.cs">
+      <DependentUpon>MyEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\OrganizedHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\OrganizedHistory.Designer.cs">
+      <DependentUpon>OrganizedHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PaymentOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PaymentOptions.Designer.cs">
+      <DependentUpon>PaymentOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PersonalInfo.Designer.cs">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredEventList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredEventList.Designer.cs">
+      <DependentUpon>RegisteredEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredEvents.Designer.cs">
+      <DependentUpon>RegisteredEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredHistory.Designer.cs">
+      <DependentUpon>RegisteredHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredUserList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredUserList.Designer.cs">
+      <DependentUpon>RegisteredUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\RegisteredUsers.Designer.cs">
+      <DependentUpon>RegisteredUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\RequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\RequestForm.Designer.cs">
+      <DependentUpon>RequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\EventServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\EventServices.Designer.cs">
+      <DependentUpon>EventServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\SearchBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\SearchBrowse.Designer.cs">
+      <DependentUpon>SearchBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\SearchMyEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\SearchMyEvents.Designer.cs">
+      <DependentUpon>SearchMyEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\SearchRegisteredEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\SearchRegisteredEvents.Designer.cs">
+      <DependentUpon>SearchRegisteredEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\Security.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\Security.Designer.cs">
+      <DependentUpon>Security.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\ShowLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\ShowLocation.Designer.cs">
+      <DependentUpon>ShowLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CardDataList.resx">
+      <DependentUpon>CardDataList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\EventForm.resx">
+      <DependentUpon>EventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\EventListA.resx">
+      <DependentUpon>EventListA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\GenerateCards.resx">
+      <DependentUpon>GenerateCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\MainAdminForm.resx">
+      <DependentUpon>MainAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\RegisteredEvents.resx">
+      <DependentUpon>RegisteredEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\RegisteredList.resx">
+      <DependentUpon>RegisteredList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\SearchEvents.resx">
+      <DependentUpon>SearchEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\SearchUsers.resx">
+      <DependentUpon>SearchUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\AccountPay.resx">
+      <DependentUpon>AccountPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\AddBalance.resx">
+      <DependentUpon>AddBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\AllEventList.resx">
+      <DependentUpon>AllEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\BkashPay.resx">
+      <DependentUpon>BkashPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\BrowseEvents.resx">
+      <DependentUpon>BrowseEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\CreateEvent1_0.resx">
+      <DependentUpon>CreateEvent1_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\CreateEvent2.resx">
+      <DependentUpon>CreateEvent2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\CreateEvents.resx">
+      <DependentUpon>CreateEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\Credits.resx">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\EventList.resx">
+      <DependentUpon>EventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\HistoryList.resx">
+      <DependentUpon>HistoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\HomeEventList.resx">
+      <DependentUpon>HomeEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\MyEvents.resx">
+      <DependentUpon>MyEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\OrganizedHistory.resx">
+      <DependentUpon>OrganizedHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PaymentOptions.resx">
+      <DependentUpon>PaymentOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PersonalInfo.resx">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\RegisteredEventList.resx">
+      <DependentUpon>RegisteredEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\RegisteredEvents.resx">
+      <DependentUpon>RegisteredEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\RegisteredHistory.resx">
+      <DependentUpon>RegisteredHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\RegisteredUserList.resx">
+      <DependentUpon>RegisteredUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\RegisteredUsers.resx">
+      <DependentUpon>RegisteredUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\RequestForm.resx">
+      <DependentUpon>RequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\EventServices.resx">
+      <DependentUpon>EventServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\SearchBrowse.resx">
+      <DependentUpon>SearchBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\SearchMyEvents.resx">
+      <DependentUpon>SearchMyEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\SearchRegisteredEvents.resx">
+      <DependentUpon>SearchRegisteredEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\Security.resx">
+      <DependentUpon>Security.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\ShowLocation.resx">
+      <DependentUpon>ShowLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Eventify_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\def_person.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\def_picture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo-color.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
