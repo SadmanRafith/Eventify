@@ -22,17 +22,16 @@ replace <code>"DESKTOP-TGP1F01"</code> with the name of your desktop in specific
   ### Customer:
   After creating a new account (Sign Up) all Customer (Users and Organizers) are considered Regular users. With only the ability to register events.
 A user can,
-
 - Log in to their account.
 - Update personal information and password after login.
 - Reset password by email verification.
--	Browse events that are created by organizers.
--	Register multiple events.
--	Choose the facilities offered by the organizers at their events.
--	Edit registered events one day before the event date.
--	Unregister events one day prior to the event.
--	Recharge using purchased token provided by admins.
--	View history of events registered.
+- Browse events that are created by organizers.
+- Register multiple events.
+- Choose the facilities offered by the organizers at their events.
+- Edit registered events one day before the event date.
+- Unregister events one day prior to the event.
+- Recharge using purchased token provided by admins.
+- View history of events registered.
 
   ### Organizer:
 A user can send a request to admin to be an organizer. If admin accepts the request 
